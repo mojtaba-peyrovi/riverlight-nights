@@ -46,7 +46,7 @@ const HeroSection = () => {
           </div>
           <div className="flex items-center gap-2 border border-gold/30 rounded-full px-5 py-2.5 bg-background/40 backdrop-blur-sm">
             <MapPin className="w-4 h-4 text-gold" />
-            <span className="text-cream/90 text-sm font-sans">Rhine River · Germany</span>
+            <span className="text-cream/90 text-sm font-sans">Freiheit 15, 12555 Berlin</span>
           </div>
         </div>
 
