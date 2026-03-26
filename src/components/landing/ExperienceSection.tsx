@@ -1,8 +1,10 @@
+import coupleShip from "@/assets/couple-ship.jpg";
+import floatingLights from "@/assets/floating-lights.jpg";
+
 const ExperienceSection = () => {
   return (
     <section className="py-24 md:py-32 px-6 bg-section-gradient">
       <div className="max-w-6xl mx-auto">
-        {/* Section header */}
         <div className="text-center mb-16">
           <p className="text-gold/70 tracking-[0.25em] uppercase text-xs font-sans mb-4">The Experience</p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream mb-6">
@@ -12,16 +14,16 @@ const ExperienceSection = () => {
           <div className="w-16 h-px bg-gold/40 mx-auto" />
         </div>
 
-        {/* Staggered storytelling */}
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-20">
-          {/* Image placeholder */}
-          <div className="aspect-[4/5] rounded-lg bg-secondary/60 border border-gold/10 flex items-center justify-center overflow-hidden">
-            <div className="text-center p-8">
-              <div className="w-16 h-16 rounded-full bg-gold/10 mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl">🕯️</span>
-              </div>
-              <p className="text-muted-foreground text-sm font-sans">Cinematic event imagery</p>
-            </div>
+          <div className="aspect-[4/5] rounded-lg overflow-hidden border border-gold/10">
+            <img
+              src={coupleShip}
+              alt="Romantic couple on ship deck with floating lights on the river"
+              className="w-full h-full object-cover"
+              loading="lazy"
+              width={1024}
+              height={1024}
+            />
           </div>
 
           <div className="space-y-8">
@@ -43,7 +45,6 @@ const ExperienceSection = () => {
           </div>
         </div>
 
-        {/* Second staggered block - reversed */}
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="space-y-8 md:order-2">
             <p className="text-foreground/80 text-lg md:text-xl font-sans font-light leading-relaxed">
@@ -58,13 +59,15 @@ const ExperienceSection = () => {
             </p>
           </div>
 
-          <div className="aspect-[4/5] rounded-lg bg-secondary/60 border border-gold/10 flex items-center justify-center md:order-1 overflow-hidden">
-            <div className="text-center p-8">
-              <div className="w-16 h-16 rounded-full bg-gold/10 mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl">🌸</span>
-              </div>
-              <p className="text-muted-foreground text-sm font-sans">Thai-inspired atmosphere</p>
-            </div>
+          <div className="aspect-[4/5] rounded-lg overflow-hidden border border-gold/10 md:order-1">
+            <img
+              src={floatingLights}
+              alt="Floating lotus candle lights on calm river water at night"
+              className="w-full h-full object-cover"
+              loading="lazy"
+              width={1024}
+              height={768}
+            />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import shipCelebration from "@/assets/ship-celebration.jpg";
 
 const FinalCTAFooter = () => {
   const [email, setEmail] = useState("");
@@ -22,8 +23,16 @@ const FinalCTAFooter = () => {
 
   return (
     <footer className="relative py-24 md:py-32 px-6 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-light via-background to-background" />
+      {/* Background image */}
+      <img
+        src={shipCelebration}
+        alt="Ship celebration at night"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+        width={1024}
+        height={1024}
+      />
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       
       {/* Decorative orbs */}
       <div className="absolute top-1/3 left-1/5 w-2 h-2 rounded-full bg-gold/30 animate-float" />
@@ -58,7 +67,6 @@ const FinalCTAFooter = () => {
           Only 60 places available · Early-access guests are notified first
         </p>
 
-        {/* Footer branding */}
         <div className="border-t border-gold/10 pt-8">
           <p className="text-muted-foreground text-xs font-sans">
             © 2026 · A Floating Experience on the Rhine
