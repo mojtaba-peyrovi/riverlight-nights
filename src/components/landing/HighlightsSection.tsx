@@ -1,25 +1,34 @@
+import floatingLights from "@/assets/floating-lights.jpg";
+import menuDining from "@/assets/menu-dining.jpg";
+import romanticSetting from "@/assets/romantic-setting.jpg";
+import premiumSeating from "@/assets/premium-seating.jpg";
+
 const highlights = [
   {
-    emoji: "✨",
+    image: floatingLights,
     title: "Floating Candlelight Atmosphere",
+    alt: "Floating lotus candles on calm river water",
     description:
       "Hundreds of candles and floating floral lights transform the ship into a glowing sanctuary on the water. Every corner radiates warmth.",
   },
   {
-    emoji: "🍜",
+    image: menuDining,
     title: "Thai-Inspired Culinary Journey",
+    alt: "Thai-inspired dinner spread on ship deck with candlelight",
     description:
       "A multi-course menu blending authentic Thai flavors with modern European presentation. Each dish is a conversation between cultures.",
   },
   {
-    emoji: "🌊",
+    image: romanticSetting,
     title: "Romantic Riverfront Setting",
+    alt: "Elegant candlelit dinner table on ship with river view",
     description:
       "Dine on a ship anchored in the heart of the river. The city lights, the gentle current, the open sky — an atmosphere money cannot replicate.",
   },
   {
-    emoji: "🎟️",
+    image: premiumSeating,
     title: "Limited Premium Seating",
+    alt: "Premium velvet seating with golden lanterns on ship deck",
     description:
       "Capacity is deliberately restricted. This is not a mass event — it is an intimate gathering for those who value rarity and beauty.",
   },
@@ -41,19 +50,26 @@ const HighlightsSection = () => {
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="group relative rounded-xl border border-gold/10 bg-card/80 backdrop-blur-sm p-8 md:p-10 hover:border-gold/30 transition-all duration-500"
+              className="group relative rounded-xl border border-gold/10 bg-card/80 backdrop-blur-sm overflow-hidden hover:border-gold/30 transition-all duration-500"
             >
-              {/* Image placeholder area */}
-              <div className="aspect-[16/9] rounded-lg bg-secondary/60 mb-6 flex items-center justify-center overflow-hidden">
-                <span className="text-4xl">{item.emoji}</span>
+              <div className="aspect-[16/9] overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                />
               </div>
 
-              <h3 className="font-serif text-xl md:text-2xl text-cream mb-3">{item.title}</h3>
-              <p className="text-foreground/60 font-sans font-light leading-relaxed text-sm md:text-base">
-                {item.description}
-              </p>
+              <div className="p-8 md:p-10">
+                <h3 className="font-serif text-xl md:text-2xl text-cream mb-3">{item.title}</h3>
+                <p className="text-foreground/60 font-sans font-light leading-relaxed text-sm md:text-base">
+                  {item.description}
+                </p>
+              </div>
 
-              {/* Subtle hover glow */}
               <div className="absolute inset-0 rounded-xl bg-gold/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </div>
           ))}

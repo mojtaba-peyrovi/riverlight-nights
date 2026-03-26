@@ -1,3 +1,19 @@
+import heroShip from "@/assets/hero-ship.jpg";
+import shipWide from "@/assets/ship-wide.jpg";
+import shipCelebration from "@/assets/ship-celebration.jpg";
+import coupleShip from "@/assets/couple-ship.jpg";
+import floatingLights from "@/assets/floating-lights.jpg";
+import romanticSetting from "@/assets/romantic-setting.jpg";
+
+const images = [
+  { src: shipCelebration, span: "col-span-2 md:col-span-1 md:row-span-2", aspect: "aspect-[3/4]", alt: "Ship celebration with floating lights on river" },
+  { src: floatingLights, span: "", aspect: "aspect-square", alt: "Floral floating lights on water" },
+  { src: romanticSetting, span: "", aspect: "aspect-square", alt: "Intimate dining moments on ship" },
+  { src: coupleShip, span: "", aspect: "aspect-[4/3]", alt: "Romantic couple on ship deck" },
+  { src: shipWide, span: "col-span-2 md:col-span-1", aspect: "aspect-[4/3]", alt: "Ship deck ambiance at night" },
+  { src: heroShip, span: "", aspect: "aspect-[4/3]", alt: "Festive ship with lights and guests" },
+];
+
 const SocialMomentSection = () => {
   return (
     <section className="py-24 md:py-32 px-6 bg-section-gradient">
@@ -15,18 +31,17 @@ const SocialMomentSection = () => {
           <div className="w-16 h-px bg-gold/40 mx-auto mt-6" />
         </div>
 
-        {/* Image mosaic placeholder */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {[
-            { span: "col-span-2 md:col-span-1 md:row-span-2", aspect: "aspect-[3/4]", label: "Candlelight on the river" },
-            { span: "", aspect: "aspect-square", label: "Floral floating lights" },
-            { span: "", aspect: "aspect-square", label: "Intimate dining moments" },
-            { span: "", aspect: "aspect-[4/3]", label: "Premium event atmosphere" },
-            { span: "col-span-2 md:col-span-1", aspect: "aspect-[4/3]", label: "Ship deck ambiance" },
-            { span: "", aspect: "aspect-[4/3]", label: "Memories worth sharing" },
-          ].map((item, i) => (
-            <div key={i} className={`${item.span} ${item.aspect} rounded-lg bg-secondary/60 border border-gold/10 flex items-center justify-center overflow-hidden group hover:border-gold/25 transition-all duration-300`}>
-              <p className="text-muted-foreground text-xs font-sans text-center px-4 group-hover:text-cream/60 transition-colors">{item.label}</p>
+          {images.map((item, i) => (
+            <div key={i} className={`${item.span} ${item.aspect} rounded-lg overflow-hidden border border-gold/10 group hover:border-gold/25 transition-all duration-300`}>
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                width={1024}
+                height={768}
+              />
             </div>
           ))}
         </div>
