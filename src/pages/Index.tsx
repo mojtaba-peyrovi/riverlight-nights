@@ -1,6 +1,7 @@
 import HeroSection from "@/components/landing/HeroSection";
 import ExperienceSection from "@/components/landing/ExperienceSection";
 import HighlightsSection from "@/components/landing/HighlightsSection";
+import MenuSection from "@/components/landing/MenuSection";
 import WhySpecialSection from "@/components/landing/WhySpecialSection";
 import EventDetailsSection from "@/components/landing/EventDetailsSection";
 import ReservationCTA from "@/components/landing/ReservationCTA";
@@ -14,6 +15,7 @@ const Index = () => {
       <HeroSection />
       <ExperienceSection />
       <HighlightsSection />
+      <MenuSection />
       <WhySpecialSection />
       <EventDetailsSection />
       <ReservationCTA />
