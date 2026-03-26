@@ -69,7 +69,7 @@ const FinalCTAFooter = () => {
 
         <div className="border-t border-gold/10 pt-8">
           <p className="text-muted-foreground text-xs font-sans">
-            © 2026 · A Floating Experience on the Rhine
+            © 2026 · Restaurantschiff arsVivendi · Freiheit 15, 12555 Berlin
           </p>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import menuCard from "@/assets/menu-card.jpg";
-import menuDining from "@/assets/menu-dining.jpg";
 
 const MenuSection = () => {
   return (

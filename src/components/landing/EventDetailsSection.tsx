@@ -3,7 +3,7 @@ import { Calendar, Clock, Anchor, Users, Euro, UtensilsCrossed, Cloud, ShieldChe
 const details = [
   { icon: Calendar, label: "Date", value: "Summer 2026 · Exact date TBA" },
   { icon: Clock, label: "Time", value: "18:30 – 23:00" },
-  { icon: Anchor, label: "Boarding", value: "18:00 · Rhine River Dock" },
+  { icon: Anchor, label: "Boarding", value: "18:00 · Freiheit 15, 12555 Berlin" },
   { icon: Users, label: "Capacity", value: "Limited to 60 guests" },
   { icon: Euro, label: "Pricing", value: "From €89 per person" },
   { icon: UtensilsCrossed, label: "Menu", value: "5-course Thai-inspired dinner included" },
