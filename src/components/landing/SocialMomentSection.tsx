@@ -6,12 +6,12 @@ import floatingLights from "@/assets/floating-lights.jpg";
 import romanticSetting from "@/assets/romantic-setting.jpg";
 
 const images = [
-  { src: shipCelebration, span: "col-span-2 md:col-span-1 md:row-span-2", aspect: "aspect-[3/4]", alt: "Ship celebration with floating lights on river" },
-  { src: floatingLights, span: "", aspect: "aspect-square", alt: "Floral floating lights on water" },
-  { src: romanticSetting, span: "", aspect: "aspect-square", alt: "Intimate dining moments on ship" },
-  { src: coupleShip, span: "", aspect: "aspect-[4/3]", alt: "Romantic couple on ship deck" },
-  { src: shipWide, span: "col-span-2 md:col-span-1", aspect: "aspect-[4/3]", alt: "Ship deck ambiance at night" },
-  { src: heroShip, span: "", aspect: "aspect-[4/3]", alt: "Festive ship with lights and guests" },
+  { src: shipCelebration, alt: "Ship celebration with floating lights on river" },
+  { src: floatingLights, alt: "Floral floating lights on water" },
+  { src: romanticSetting, alt: "Intimate dining moments on ship" },
+  { src: coupleShip, alt: "Romantic couple on ship deck" },
+  { src: shipWide, alt: "Ship deck ambiance at night" },
+  { src: heroShip, alt: "Festive ship with lights and guests" },
 ];
 
 const SocialMomentSection = () => {
@@ -33,7 +33,7 @@ const SocialMomentSection = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
           {images.map((item, i) => (
-            <div key={i} className={`${item.span} ${item.aspect} rounded-lg overflow-hidden border border-gold/10 group hover:border-gold/25 transition-all duration-300`}>
+            <div key={i} className="aspect-[4/3] rounded-lg overflow-hidden border border-gold/10 group hover:border-gold/25 transition-all duration-300">
               <img
                 src={item.src}
                 alt={item.alt}
